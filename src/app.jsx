@@ -1,11 +1,11 @@
 import React from "react";
+import FormComposer from './form-composer'
 
 const App = () => {
   return (
-    <div>
-      <h1>Welcome to React boilerplate</h1>
-      <p>Edit app.jsx file to edit this page</p>
-    </div>
+    <React.Fragment>
+      <FormComposer />
+    </React.Fragment>
   );
 };
 

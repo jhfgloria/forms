@@ -1,5 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
 import App from "./app.jsx";
+import React from "react";
+import reducers from './appReducer.js'
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { render } from "react-dom";
 
-ReactDOM.render(<App />, document.getElementById('app'));
+const store = createStore(reducers);
+
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app')
+);
